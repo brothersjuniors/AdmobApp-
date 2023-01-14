@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="EW9-70-QAD">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="LBA-oA-Nhl">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="EW9-70-QAD" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" translucent="NO"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" largeTitles="YES" id="HGP-2j-9uE">
+                        <rect key="frame" x="0.0" y="59" width="393" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="20"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="gfm-oB-bXa" kind="relationship" relationship="rootViewController" id="Dno-fR-ymE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fgD-cP-gBs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1811" y="-673"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="X9t-1H-f9r">
+            <objects>
+                <viewController id="gfm-oB-bXa" customClass="ViewController" customModule="TodoListApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Opz-tP-Ax1">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="697"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="タイムライン広告へ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nvH-0v-7DU">
+                                <rect key="frame" x="70" y="180" width="253" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="YcM-Jb-XeE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VkZ-zZ-EyT">
+                                <rect key="frame" x="130" y="333.33333333333331" width="133.33333333333337" height="30.333333333333314"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="advertisement"/>
+                                <connections>
+                                    <action selector="buttons:" destination="gfm-oB-bXa" eventType="touchUpInside" id="COW-I9-RXf"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EDh-T0-Vk2">
+                                <rect key="frame" x="50" y="647" width="293" height="50"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="uia-GD-yIr"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="mC3-Tt-Py2"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="VkZ-zZ-EyT" firstAttribute="centerY" secondItem="Opz-tP-Ax1" secondAttribute="centerY" id="6Zf-wX-28U"/>
+                            <constraint firstAttribute="trailing" secondItem="EDh-T0-Vk2" secondAttribute="trailing" constant="50" id="DfW-Ot-MGp"/>
+                            <constraint firstItem="EDh-T0-Vk2" firstAttribute="centerX" secondItem="Opz-tP-Ax1" secondAttribute="centerX" id="M5T-en-VZn"/>
+                            <constraint firstItem="mC3-Tt-Py2" firstAttribute="bottom" secondItem="VkZ-zZ-EyT" secondAttribute="bottom" constant="250.33333333333331" id="NuK-LV-jdS"/>
+                            <constraint firstAttribute="bottom" secondItem="EDh-T0-Vk2" secondAttribute="bottom" id="bP4-NE-vsX"/>
+                            <constraint firstItem="VkZ-zZ-EyT" firstAttribute="centerX" secondItem="Opz-tP-Ax1" secondAttribute="centerX" id="kRx-1k-2iA"/>
+                            <constraint firstItem="nvH-0v-7DU" firstAttribute="leading" secondItem="mC3-Tt-Py2" secondAttribute="leading" constant="70" id="vfN-TE-0ap"/>
+                            <constraint firstItem="EDh-T0-Vk2" firstAttribute="leading" secondItem="Opz-tP-Ax1" secondAttribute="leading" constant="50" id="xPj-zG-plp"/>
+                            <constraint firstItem="nvH-0v-7DU" firstAttribute="top" secondItem="mC3-Tt-Py2" secondAttribute="top" constant="180" id="y4e-W2-d9G"/>
+                            <constraint firstItem="mC3-Tt-Py2" firstAttribute="trailing" secondItem="nvH-0v-7DU" secondAttribute="trailing" constant="70" id="yHe-5Z-IHs"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Trc-Mf-7KR"/>
+                    <connections>
+                        <outlet property="adBaseView" destination="EDh-T0-Vk2" id="N1B-vD-aqS"/>
+                        <outlet property="button" destination="VkZ-zZ-EyT" id="1R5-Dt-7PD"/>
+                        <outlet property="label" destination="nvH-0v-7DU" id="zNz-Fq-EsL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lsO-eo-CqW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2636.9230769230767" y="-673.2227488151658"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
